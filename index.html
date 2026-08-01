@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#00F5FF">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturne Vinyl</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050507;
+            font-family: Arial, sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex justify-between max-w-5xl mx-auto p-4">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold text-white">NOCTURNE VINYL</span>
+            <ul class="flex items-center ml-4">
+                <li class="mr-4"><a href="#" class="text-white">HOME</a></li>
+                <li class="mr-4"><a href="#" class="text-white">COLLECTION</a></li>
+                <li class="mr-4"><a href="#" class="text-white">NEW ARRIVALS</a></li>
+                <li class="mr-4"><a href="#" class="text-white">ABOUT</a></li>
+                <li class="mr-4"><a href="#" class="text-white">JOURNAL</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center">
+            <input type="search" placeholder="Search" class="px-4 py-2 rounded-full">
+            <span class="ml-4 text-white">🛍️</span>
+            <span id="cart-count" class="ml-2 text-white">0</span>
+        </div>
+    </nav>
+    <section class="hero flex justify-between max-w-5xl mx-auto p-4">
+        <div class="w-1/2">
+            <h1 class="text-5xl font-bold text-white">SOUND IN THE <span class="text-pink-500">DARK</span></h1>
+            <p class="text-lg text-white">Curated vinyl records for the night. Limited pressings, analog warmth.</p>
+            <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">SHOP NOW</button>
+            <button class="border border-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded ml-4">EXPLORE COLLECTION</button>
+        </div>
+        <div class="w-1/2">
+            <img src="uploaded-image.jpg" alt="Vinyl Turntable" class="w-full h-full object-cover rounded">
+        </div>
+    </section>
+    <section class="features flex justify-between max-w-5xl mx-auto p-4">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold text-white">500+ LIMITED PRESSES</span>
+            <span class="ml-4 text-white">📦 FREE WORLDWIDE SHIPPING</span>
+            <span class="ml-4 text-white">🔥 AUTHENTIC & GRADED</span>
+        </div>
+    </section>
+    <section class="grid max-w-5xl mx-auto p-4 grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="glassmorphism">
+            <img src="uploaded-image.jpg" alt="Vinyl Record" class="w-full h-full object-cover rounded">
+            <h2 class="text-lg font-bold text-white">Midnight Cosmos Vol II</h2>
+            <p class="text-lg text-white">$45</p>
+            <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart(1)">ADD TO CART</button>
+        </div>
+        <div class="glassmorphism">
+            <img src="uploaded-image.jpg" alt="Vinyl Record" class="w-full h-full object-cover rounded">
+            <h2 class="text-lg font-bold text-white">Neon Dreams - Limited</h2>
+            <p class="text-lg text-white">$52</p>
+            <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart(2)">ADD TO CART</button>
+        </div>
+        <div class="glassmorphism">
+            <img src="uploaded-image.jpg" alt="Vinyl Record" class="w-full h-full object-cover rounded">
+            <h2 class="text-lg font-bold text-white">Sound In The Dark</h2>
+            <p class="text-lg text-white">$39</p>
+            <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart(3)">ADD TO CART</button>
+        </div>
+    </section>
+    <section class="newsletter max-w-5xl mx-auto p-4">
+        <h2 class="text-lg font-bold text-white">NEWSLETTER</h2>
+        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-full">
+        <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">SUBSCRIBE</button>
+    </section>
+    <footer class="max-w-5xl mx-auto p-4">
+        <p class="text-lg text-white">EST. 2021</p>
+    </footer>
+    <script src="store-logic.js"></script>
+<script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script></body>
+</html>
